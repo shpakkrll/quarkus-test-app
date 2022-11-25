@@ -1,9 +1,6 @@
 name: code-freeze-thursday
 run-name: Label PRs on Thursday
 on:
-  pull_request_target:
-    branches:
-     - main
   schedule:
     - cron: '* * * * 6'  # Every Thursday./ Actual test: Friday
 jobs:

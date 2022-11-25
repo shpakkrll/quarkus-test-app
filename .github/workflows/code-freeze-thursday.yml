@@ -5,7 +5,7 @@ on:
     branches:
      - main
   schedule:
-    - cron: '* * * * 5'  # Every Thursday./ Actual test: Friday
+    - cron: '* * * * 6'  # Every Thursday./ Actual test: Friday
 jobs:
   label-every-pr:
     permissions:
@@ -13,8 +13,7 @@ jobs:
         pull-requests: write
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/labeler@v4.0.2
+    - uses: actions/labeler@v4
       with:
         repo-token: "${{ secrets.GITHUB_TOKEN }}"
-	sync-labels: ""
-
+        sync-labels: ""
